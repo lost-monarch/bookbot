@@ -17,9 +17,18 @@ def character_count(book_contents):
 
 def char_sort(book_contents):
     sorted = []
-    for char in book_contents:
-        if char.isalpha() == True:
-            sorted.append(char: dict[char])
+    for c in book_contents:
+        char_count = {}
+        if c.isalpha() == True:
+            char_count["char"] = c
+            char_count["num"] = book_contents[c]
+            sorted.append(char_count)
         else:
             None
-    return sorted
+    def sort_on(items):
+        return items["num"]
+            
+    sorted.sort(reverse=True, key=sort_on)    
+    
+    for items in sorted:
+        print(f"{items['char']}: {items['num']}")
