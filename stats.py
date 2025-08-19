@@ -19,12 +19,9 @@ def char_sort(book_contents):
     sorted = []
     for c in book_contents:
         char_count = {}
-        if c.isalpha() == True:
-            char_count["char"] = c
-            char_count["num"] = book_contents[c]
-            sorted.append(char_count)
-        else:
-            None
+        char_count["char"] = c
+        char_count["num"] = book_contents[c]
+        sorted.append(char_count)
 
     #sort_on here is defined so that when it is called in the .sort(key=sort_on) it will take the input of .sort() and it returns the "num" value which then .sort(uses) as its reference to sort the items in the listed called 
     #"sorted" that is why the parameter name does not have to coencide with a variable in char_sort().
@@ -33,5 +30,4 @@ def char_sort(book_contents):
             
     sorted.sort(reverse=True, key=sort_on)    
     
-    for items in sorted:
-        print(f"{items['char']}: {items['num']}")
+    return sorted
