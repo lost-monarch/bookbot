@@ -7,20 +7,20 @@ def get_book_text(path):
         return f.read()
 
 def main():
-    character_dict = character_count(get_book_text("frankenstein.txt"))
+    character_dict = character_count(get_book_text("books/frankenstein.txt"))
 
-    words = word_count(get_book_text("frankenstein.txt"))
+    words = word_count(get_book_text("book/frankenstein.txt"))
 
     print("============ BOOKBOT ============")
     print("Analyzing book found at books/frankenstein.txt...")
     print("----------- Word Count ----------")
     print(f"found {words} total words")
     print("--------- Character Count -------")
-    
+
     for i in char_sort(character_dict):
         if i["char"].isalpha():
             print(f"{i['char']} : {i['num']}")
-            
+
     print("============= END ===============")
-    
+
 main()
