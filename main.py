@@ -13,6 +13,6 @@ def main():
 
     print(f"{words} words in the document")
     #print(character_dict)
-    print(sorted)
+    print(char_sort(character_dict))
 
 main()
