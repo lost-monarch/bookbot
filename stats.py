@@ -25,6 +25,9 @@ def char_sort(book_contents):
             sorted.append(char_count)
         else:
             None
+
+    #sort_on here is defined so that when it is called in the .sort(key=sort_on) it will take the input of .sort() and it returns the "num" value which then .sort(uses) as its reference to sort the items in the listed called 
+    #"sorted" that is why the parameter name does not have to coencide with a variable in char_sort().
     def sort_on(items):
         return items["num"]
             
