@@ -14,3 +14,12 @@ def character_count(book_contents):
         else:
             character[char] += 1
     return character
+
+def char_sort(book_contents):
+    sorted = []
+    for char in dict:
+        if char.isalpha() == True:
+            sorted.append(char: dict[char])
+        else:
+            None
+    return sorted
