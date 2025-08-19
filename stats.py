@@ -17,7 +17,7 @@ def character_count(book_contents):
 
 def char_sort(book_contents):
     sorted = []
-    for char in dict:
+    for char in book_contents:
         if char.isalpha() == True:
             sorted.append(char: dict[char])
         else:
