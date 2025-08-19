@@ -7,9 +7,9 @@ def get_book_text(path):
         return f.read()
 
 def main():
-    character_dict = character_count(get_book_text("frankenstein.txt"))
+    character_dict = character_count(get_book_text("books/frankenstein.txt"))
 
-    words = word_count(get_book_text("frankenstein.txt"))
+    words = word_count(get_book_text("books/frankenstein.txt"))
 
     print("============ BOOKBOT ============")
     print("Analyzing book found at books/frankenstein.txt...")
