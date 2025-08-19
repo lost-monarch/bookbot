@@ -7,12 +7,16 @@ def get_book_text(path):
         return f.read()
 
 def main():
-    character_dict = character_count(get_book_text("books/frankenstein.txt"))
+    character_dict = character_count(get_book_text("frankenstein.txt"))
 
-    words = word_count(get_book_text("books/frankenstein.txt"))
+    words = word_count(get_book_text("frankenstein.txt"))
 
-    print(f"{words} words in the document")
-    #print(character_dict)
-    print(char_sort(character_dict))
-
+    print("============ BOOKBOT ============")
+    print("Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count ----------")
+    print(f"found {words} total words")
+    print("--------- Character Count -------")
+    char_sort(character_dict)
+    print("============= END ===============")
+    
 main()
